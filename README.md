@@ -38,7 +38,7 @@ python -m http.server 8000 --bind 127.0.0.1
 本次只准备本地文件，没有提交或推送。
 
 1. 内容准备好后，自行提交并推送到此仓库的默认分支。
-2. 在 GitHub 仓库 Settings → Pages 中，选择 Deploy from a branch，选择实际默认分支和 `/ (root)` 并保存。
+2. 在 GitHub 仓库 Settings → Pages 中，将 Build and deployment → Source 设置为 GitHub Actions。仓库已提供 `.github/workflows/pages.yml`，后续推送 main 会自动部署。
 3. 用户主页预期地址为 https://jbwenjoy.github.io/ 。
 
 已移除过期域名的 `CNAME` 文件。网站使用 https://jbwenjoy.github.io/ 。GitHub 仓库 Settings → Pages → Custom domain 应为空；如仍显示旧域名，点击 Remove，取消默认地址到旧域名的跳转。
@@ -88,3 +88,9 @@ git push
 拉取网站更新后运行 `git submodule update --init --recursive`，即可检出网站所记录的简历版本。子模块更新不会自动同步网页版文案或 PDF 下载文件。
 
 网页姓名统一为 Bowen Jiang，联系入口仅展示 bowen_2025@outlook.com。LaTeX 子模块独立维护，其源码中的个人信息不受网页配置影响。
+
+## 发布隔离
+
+默认分支发布会尝试拉取私有子模块并失败，因此必须使用 GitHub Actions 来源。自定义工作流明确设置 `submodules: false`，不配置私有仓库凭证；只把 `index.html` 和 `assets/` 复制到 `_site/` 并发布。LaTeX 源码、README、Git 元数据不在发布包中。
+
+切换来源后如未自动发布，可进入 Actions → Deploy personal homepage → Run workflow 手动运行。`_site/` 是临时发布目录，请勿提交。

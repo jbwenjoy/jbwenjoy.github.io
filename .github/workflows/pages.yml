@@ -1,0 +1,49 @@
+name: Deploy personal homepage
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout website without private submodules
+        uses: actions/checkout@v6
+        with:
+          submodules: false
+          persist-credentials: false
+      - name: Prepare public website files only
+        shell: bash
+        run: |
+          mkdir -p _site
+          cp index.html _site/index.html
+          cp -R assets _site/assets
+          touch _site/.nojekyll
+          test -f _site/assets/js/content.js
+          test ! -e _site/latex-resume
+          test ! -e _site/.gitmodules
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+      - name: Upload website artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
