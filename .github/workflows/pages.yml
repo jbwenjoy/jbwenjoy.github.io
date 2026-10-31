@@ -23,7 +23,7 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Checkout website without private submodules
+      - name: Checkout website
         uses: actions/checkout@v6
         with:
           submodules: false

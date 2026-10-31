@@ -1,6 +1,6 @@
 # Bowen Jiang · 个人主页
 
-无需构建、无需 npm 依赖的静态个人主页，适用于 GitHub Pages。使用默认的 `jbwenjoy.github.io` 域名，不配置 `CNAME`。当前内容从旧版 `latex-resume/cv_4.tex` 摘录，仅用于搭建首版，请在公开上线前校对经历、日期和公开范围。
+无需构建、无需 npm 依赖的静态个人主页，适用于 GitHub Pages。使用默认的 `jbwenjoy.github.io` 域名，不配置 `CNAME`。当前内容从旧版 `cv_4.tex` 摘录，仅用于搭建首版，请在公开上线前校对经历、日期和公开范围。
 
 ## 本地预览
 
@@ -35,8 +35,6 @@ python -m http.server 8000 --bind 127.0.0.1
 
 ## GitHub Pages 上线
 
-本次只准备本地文件，没有提交或推送。
-
 1. 内容准备好后，自行提交并推送到此仓库的默认分支。
 2. 在 GitHub 仓库 Settings → Pages 中，将 Build and deployment → Source 设置为 GitHub Actions。仓库已提供 `.github/workflows/pages.yml`，后续推送 main 会自动部署。
 3. 用户主页预期地址为 https://jbwenjoy.github.io/ 。
@@ -54,43 +52,14 @@ python -m http.server 8000 --bind 127.0.0.1
 
 建议素材准备顺序：个人照片 → 最新介绍与经历 → 2–4 个代表项目及图像 → PDF 简历 → 外部链接。
 
-## LaTeX 简历子模块
+## LaTeX 简历
 
-简历源码独立维护于 `git@github.com:jbwenjoy/latex-resume.git`，挂载路径为 `latex-resume/`。
+LaTeX 简历在独立私有仓库中维护，网站不再包含子模块。可在网站目录之外单独克隆简历仓库。需要提供公开下载时，仅将确认可公开的 PDF 放进 `assets/files/` 并更新 `profile.resume`。
 
-首次克隆整个网站与简历：
+网页姓名统一为 Bowen Jiang，联系入口仅展示 bowen_2025@outlook.com。
 
-```sh
-git clone --recurse-submodules git@github.com:jbwenjoy/jbwenjoy.github.io.git
-```
+## 发布范围
 
-已克隆网站时初始化简历：
+GitHub Actions 工作流只把 `index.html` 和 `assets/` 复制到 `_site/` 并发布，不需要简历仓库访问权限。README、Git 元数据不在发布包中。
 
-```sh
-git submodule update --init --recursive
-```
-
-修改简历后，先在子模块中提交并推送，再在网站仓库记录新的提交指针：
-
-```sh
-cd latex-resume
-git switch main
-# 编辑 cv_4.tex 后：
-git add cv_4.tex resume.cls
-git commit -m "Update resume"
-git push origin main
-cd ..
-git add latex-resume
-git commit -m "Update resume submodule"
-git push
-```
-
-拉取网站更新后运行 `git submodule update --init --recursive`，即可检出网站所记录的简历版本。子模块更新不会自动同步网页版文案或 PDF 下载文件。
-
-网页姓名统一为 Bowen Jiang，联系入口仅展示 bowen_2025@outlook.com。LaTeX 子模块独立维护，其源码中的个人信息不受网页配置影响。
-
-## 发布隔离
-
-默认分支发布会尝试拉取私有子模块并失败，因此必须使用 GitHub Actions 来源。自定义工作流明确设置 `submodules: false`，不配置私有仓库凭证；只把 `index.html` 和 `assets/` 复制到 `_site/` 并发布。LaTeX 源码、README、Git 元数据不在发布包中。
-
-切换来源后如未自动发布，可进入 Actions → Deploy personal homepage → Run workflow 手动运行。`_site/` 是临时发布目录，请勿提交。
+如需手动发布，可进入 Actions → Deploy personal homepage → Run workflow。`_site/` 是临时发布目录，请勿提交。
