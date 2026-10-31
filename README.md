@@ -1,6 +1,6 @@
 # Bowen Jiang · 个人主页
 
-无需构建、无需 npm 依赖的静态个人主页，适用于 GitHub Pages。保留现有 `CNAME`。当前内容从旧版 `latex-resume/cv_4.tex` 摘录，仅用于搭建首版，请在公开上线前校对经历、日期和公开范围。
+无需构建、无需 npm 依赖的静态个人主页，适用于 GitHub Pages。使用默认的 `jbwenjoy.github.io` 域名，不配置 `CNAME`。当前内容从旧版 `latex-resume/cv_4.tex` 摘录，仅用于搭建首版，请在公开上线前校对经历、日期和公开范围。
 
 ## 本地预览
 
@@ -41,7 +41,7 @@ python -m http.server 8000 --bind 127.0.0.1
 2. 在 GitHub 仓库 Settings → Pages 中，选择 Deploy from a branch，选择实际默认分支和 `/ (root)` 并保存。
 3. 用户主页预期地址为 https://jbwenjoy.github.io/ 。
 
-仓库原有 `CNAME` 内容为 `jbwenjoy.me`，原样保留。它会让 Pages 使用该自定义域名；如果你还没有配置这个域名，先删除 `CNAME`，并清空 Pages 设置中的 Custom domain，使用 github.io 地址上线。若继续使用自定义域名，需自行核对 DNS 和 HTTPS 配置。
+已移除过期域名的 `CNAME` 文件。网站使用 https://jbwenjoy.github.io/ 。GitHub 仓库 Settings → Pages → Custom domain 应为空；如仍显示旧域名，点击 Remove，取消默认地址到旧域名的跳转。
 
 ## 功能与维护
 
