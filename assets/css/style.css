@@ -18,3 +18,7 @@
 .wordmark{font-size:22px;letter-spacing:2px;white-space:nowrap;flex-shrink:0}
 .portrait-monogram{font-size:clamp(30px,4.5vw,58px);letter-spacing:2px;padding:0 18px 20px}
 @media(max-width:640px){.wordmark{font-size:20px}.portrait-monogram{font-size:clamp(30px,9vw,54px);letter-spacing:2px;padding-bottom:15px}}
+
+/* Preserve the complete square avatar in the responsive profile frame. */
+.portrait img{object-fit:contain;object-position:center;padding:28px;background:#e6ebdf}
+@media(max-width:640px){.portrait img{padding:18px}}

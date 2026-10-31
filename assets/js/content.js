@@ -21,8 +21,8 @@ window.SITE_CONTENT = {
       "zh": "AGIBOT / 智元机器人",
       "en": "AGIBOT"
     },
-    "photo": "",
-    "photoAlt": "Portrait of Bowen Jiang",
+    "photo": "assets/images/github-avatar.jpg",
+    "photoAlt": { "zh": "Bowen Jiang 的 GitHub 头像", "en": "Bowen Jiang’s GitHub avatar" },
     "email": "bowen_2025@outlook.com",
     "linkedin": "https://www.linkedin.com/in/bowen-j-976283229/",
     "resume": "",
@@ -324,8 +324,8 @@ window.SITE_I18N = {
     "en": "Contact"
   },
   "portrait": {
-    "zh": "个人照片 / 机器人工作照",
-    "en": "Portrait / Robotics at work"
+    "zh": "GitHub 头像",
+    "en": "GitHub avatar"
   },
   "experienceTitle": {
     "zh": "在真实世界中，让机器人动起来。",

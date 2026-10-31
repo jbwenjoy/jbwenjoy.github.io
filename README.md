@@ -69,3 +69,5 @@ GitHub Actions 工作流只把 `index.html` 和 `assets/` 复制到 `_site/` 并
 导航右侧提供中文 / EN 切换，首次访问使用浏览器语言（中文浏览器显示中文，其余显示英文），之后记住手动选择。存储不可用时仍可切换。
 
 `assets/js/content.js` 中，共享字段使用普通字符串，需翻译的字段使用 `{ zh: "中文内容", en: "English content" }`；列表也可整体翻译为 `{ zh: ["中文条目"], en: ["English item"] }`。姓名固定为 Bowen Jiang，邮箱、LinkedIn 链接和素材路径两种语言共用。固定页面文案位于同文件的 `SITE_I18N`。
+
+当前主页头像使用公开 GitHub 头像的本地副本 `assets/images/github-avatar.jpg`，不会随 GitHub 头像更改自动更新。替换该图片即可更新，图片来源为 GitHub 账号 jbwenjoy。
