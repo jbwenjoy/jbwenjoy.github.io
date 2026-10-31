@@ -24,6 +24,7 @@ window.SITE_CONTENT = {
     "photo": "",
     "photoAlt": "Portrait of Bowen Jiang",
     "email": "bowen_2025@outlook.com",
+    "linkedin": "https://www.linkedin.com/in/bowen-j-976283229/",
     "resume": "",
     "focus": [
       "Motion Control",

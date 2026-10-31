@@ -58,6 +58,7 @@
   data.skills.forEach(item => { const row = el("div", "skill-row"); row.append(el("h3", "", item.label), tags(item.items)); $("skills").append(row); });
   $("contact-text").textContent = p.contactText;
   addLink($("contact-links"), `${p.email} ↗`, `mailto:${p.email}`, "button primary");
+  addLink($("contact-links"), "LinkedIn ↗", p.linkedin, "button secondary");
   $("copyright").textContent = `© ${new Date().getFullYear()} ${p.name}`;
   }
   let language;
