@@ -13,3 +13,8 @@
 .header{gap:24px}.header nav{margin-left:auto}.language-switch{display:flex;gap:2px;border:1px solid var(--line);border-radius:5px;padding:3px;flex-shrink:0}.language-switch button{border:0;background:transparent;color:var(--muted);font-size:11px;cursor:pointer;padding:3px 9px;border-radius:3px;line-height:1.8}.language-switch button[aria-pressed=true]{background:var(--green);color:white}html[lang=en] .skill-row{grid-template-columns:125px 1fr}html[lang=en] h2{letter-spacing:0}
 @media(max-width:640px){.header{height:auto;min-height:96px;display:grid;grid-template-columns:1fr auto;gap:8px 16px;padding-top:12px;padding-bottom:12px}.header nav{grid-column:1/-1;grid-row:2;width:100%;justify-content:space-between;gap:8px}.language-switch{grid-column:2;grid-row:1}.section-heading h2{font-size:24px}.hero-title{line-height:1.8}html[lang=en] .skill-row{grid-template-columns:110px 1fr}}
 @media print{.language-switch{display:none}}
+
+/* Full given name in the site wordmark and portrait placeholder. */
+.wordmark{font-size:22px;letter-spacing:2px;white-space:nowrap;flex-shrink:0}
+.portrait-monogram{font-size:clamp(30px,4.5vw,58px);letter-spacing:2px;padding:0 18px 20px}
+@media(max-width:640px){.wordmark{font-size:20px}.portrait-monogram{font-size:clamp(30px,9vw,54px);letter-spacing:2px;padding-bottom:15px}}
