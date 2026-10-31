@@ -18,8 +18,8 @@ window.SITE_CONTENT = {
       "en": "Shanghai, China"
     },
     "affiliation": {
-      "zh": "AGIBOT / 智元机器人",
-      "en": "AGIBOT"
+      "zh": "AGI / MF",
+      "en": "AGI / MF"
     },
     "photo": "assets/images/github-avatar.jpg",
     "photoAlt": { "zh": "Bowen Jiang 的 GitHub 头像", "en": "Bowen Jiang’s GitHub avatar" },
@@ -40,12 +40,12 @@ window.SITE_CONTENT = {
   "experience": [
     {
       "company": {
-        "zh": "智元机器人",
-        "en": "AGIBOT"
+        "zh": "AGI / MF",
+        "en": "AGI / MF"
       },
       "detail": {
-        "zh": "精灵（Genie）业务部 & 觅峰",
-        "en": "Genie Division & Mifeng"
+        "zh": "机器人与数据业务",
+        "en": "Robotics & Data"
       },
       "role": {
         "zh": "运控算法工程师 / 数据算法工程师",
@@ -114,14 +114,122 @@ window.SITE_CONTENT = {
   ],
   "projects": [
     {
+      "title": "Cross-Embodiment Data",
+      "subtitle": {
+        "zh": "MF · 无本体数据迁移与通用重定向",
+        "en": "MF · Embodiment-free data transfer and retargeting"
+      },
+      "category": {
+        "zh": "数据与系统",
+        "en": "Data & Systems"
+      },
+      "period": "2026",
+      "description": {
+        "zh": "围绕无本体数据对目标机器人的可迁移性，设计可扩展的重定向框架，连接多种数据来源与机器人构型，并结合真机回放验证结果。",
+        "en": "Designed an extensible retargeting framework to study how embodiment-free data transfers to target robots, connecting different data sources and robot configurations with real-robot replay validation."
+      },
+      "tags": [
+        "Retargeting",
+        "Inverse Kinematics",
+        "Framework Design"
+      ],
+      "image": "",
+      "imageAlt": {
+        "zh": "代表性工作配图",
+        "en": "Selected work illustration"
+      },
+      "links": []
+    },
+    {
+      "title": "Robot Data Systems",
+      "subtitle": {
+        "zh": "MF · 数据规格、系统语义与交付",
+        "en": "MF · Data specifications, system semantics, and delivery"
+      },
+      "category": {
+        "zh": "数据与系统",
+        "en": "Data & Systems"
+      },
+      "period": "2026",
+      "description": {
+        "zh": "将外部数据需求转化为机器人数据规格和处理方案，贯通端侧信号含义、时间基准与数据处理链路，承担关键模块开发、系统集成与交付。",
+        "en": "Translated external data requirements into robot data specifications and processing solutions, connecting on-robot signal semantics and time bases with data pipelines through implementation, integration, and delivery."
+      },
+      "tags": [
+        "Data Architecture",
+        "Systems Integration",
+        "Technical Delivery"
+      ],
+      "image": "",
+      "imageAlt": {
+        "zh": "代表性工作配图",
+        "en": "Selected work illustration"
+      },
+      "links": []
+    },
+    {
+      "title": "Teleoperation & Manipulation",
+      "subtitle": {
+        "zh": "AGI · 遥操作、全身控制与灵巧操作",
+        "en": "AGI · Teleoperation, whole-body control, and dexterous manipulation"
+      },
+      "category": {
+        "zh": "运动控制",
+        "en": "Motion Control"
+      },
+      "period": "2025.07 — 2026.03",
+      "description": {
+        "zh": "负责机器人端 VR 遥操作与轮式双臂全身运动控制开发，独立建设灵巧手运控能力，并参与真机强化学习中的端侧遥操作接管链路适配。",
+        "en": "Developed on-robot VR teleoperation and whole-body motion control for wheeled dual-arm robots, independently built dexterous-hand control capabilities, and contributed the teleoperation takeover path for real-robot reinforcement learning."
+      },
+      "tags": [
+        "Teleoperation",
+        "Whole-Body Control",
+        "Dexterous Manipulation"
+      ],
+      "image": "",
+      "imageAlt": {
+        "zh": "代表性工作配图",
+        "en": "Selected work illustration"
+      },
+      "links": []
+    },
+    {
+      "title": "Bipedal Motion Control",
+      "subtitle": {
+        "zh": "小鹏机器人 · 实时优化与运动规划",
+        "en": "XPeng Robotics · Real-time optimization and motion planning"
+      },
+      "category": {
+        "zh": "运动控制",
+        "en": "Motion Control"
+      },
+      "period": "2024.05 — 2024.09",
+      "description": {
+        "zh": "参与双足机器人 MPC 控制器与实时优化开发，设计步态和加速度规划器，并搭建动捕数据后处理管线，连接运动数据与机器人控制。",
+        "en": "Contributed to a bipedal robot MPC controller and real-time optimization, designed gait and acceleration planners, and built motion capture post-processing pipelines connecting motion data with robot control."
+      },
+      "tags": [
+        "MPC",
+        "Motion Planning",
+        "Motion Capture"
+      ],
+      "image": "",
+      "imageAlt": {
+        "zh": "代表性工作配图",
+        "en": "Selected work illustration"
+      },
+      "links": []
+    },
+    {
       "title": "RL Augmented MPC",
       "subtitle": {
         "zh": "强化学习增强的双足机器人控制",
         "en": "RL-augmented control for bipedal robots"
       },
       "category": {
-        "zh": "控制与学习",
-        "en": "Control & Learning"
+        "zh": "研究与课程",
+        "en": "Research & Coursework"
       },
       "period": "2025.02 — 2025.05",
       "description": {
@@ -137,85 +245,6 @@ window.SITE_CONTENT = {
       "imageAlt": {
         "zh": "双足机器人控制实验",
         "en": "Bipedal robot control experiment"
-      },
-      "links": []
-    },
-    {
-      "title": "Learning Traffic Scenarios",
-      "subtitle": {
-        "zh": "基于 SocialVAE 的危险驾驶轨迹生成",
-        "en": "Generating challenging driving trajectories with SocialVAE"
-      },
-      "category": {
-        "zh": "控制与学习",
-        "en": "Control & Learning"
-      },
-      "period": "2024.03 — 2024.05",
-      "description": {
-        "zh": "结合 LSTM、时序 VAE 与注意力机制生成交通场景，并通过运动学约束和聚类改善轨迹质量。",
-        "en": "Combined LSTM, temporal VAE, and attention mechanisms to generate traffic scenarios, using kinematic constraints and clustering to improve trajectory quality."
-      },
-      "tags": [
-        "VAE",
-        "Trajectory Generation"
-      ],
-      "image": "",
-      "imageAlt": {
-        "zh": "车辆轨迹生成可视化",
-        "en": "Traffic trajectory generation visualization"
-      },
-      "links": []
-    },
-    {
-      "title": "Aerial Load Transport",
-      "subtitle": {
-        "zh": "带绳索载荷的无人机控制与轨迹优化",
-        "en": "Control and trajectory optimization for a UAV with a suspended load"
-      },
-      "category": {
-        "zh": "规划与优化",
-        "en": "Planning & Optimization"
-      },
-      "period": "2023.11 — 2023.12",
-      "description": {
-        "zh": "从 A-star 路径搜索到 direct collocation 轨迹优化，建立无人机与绳索载荷的混合模型并设计几何控制器。",
-        "en": "Combined A-star path search with direct collocation trajectory optimization, modeled the UAV and suspended load as a hybrid system, and designed a geometric controller."
-      },
-      "tags": [
-        "CasADi",
-        "Trajectory Optimization"
-      ],
-      "image": "",
-      "imageAlt": {
-        "zh": "无人机载荷轨迹实验",
-        "en": "UAV suspended-load trajectory experiment"
-      },
-      "links": []
-    },
-    {
-      "title": "Ducted-Fan UAV",
-      "subtitle": {
-        "zh": "微型涵道无人机 MPC 飞控",
-        "en": "MPC flight control for a miniature ducted-fan UAV"
-      },
-      "category": {
-        "zh": "规划与优化",
-        "en": "Planning & Optimization"
-      },
-      "period": "2022.12 — 2023.05",
-      "description": {
-        "zh": "结合空气动力学模拟与飞行数据建立动力学模型，使用 MPC 与 PID 补偿实现轨迹跟踪。",
-        "en": "Built a dynamics model from aerodynamic simulations and flight data, and combined MPC with PID compensation for trajectory tracking."
-      },
-      "tags": [
-        "Modeling",
-        "MPC",
-        "Simulink"
-      ],
-      "image": "",
-      "imageAlt": {
-        "zh": "涵道无人机原型",
-        "en": "Ducted-fan UAV prototype"
       },
       "links": []
     }
@@ -336,12 +365,12 @@ window.SITE_I18N = {
     "en": "Work & internships"
   },
   "projectsTitle": {
-    "zh": "探索、构建与验证。",
-    "en": "Explore. Build. Validate."
+    "zh": "从算法到系统，再到真机。",
+    "en": "From algorithms to real robot systems."
   },
   "projectsAside": {
-    "zh": "项目与研究",
-    "en": "Projects & research"
+    "zh": "代表性工作与研究",
+    "en": "Selected work & research"
   },
   "educationTitle": {
     "zh": "教育与技术积累",
@@ -377,7 +406,7 @@ window.SITE_I18N = {
   },
   "projectCount": {
     "zh": "显示 {count} 个项目",
-    "en": "Showing {count} projects"
+    "en": "Projects shown: {count}"
   },
   "description": {
     "zh": "Bowen Jiang 的个人主页：机器人控制、灵巧操作与机器人学习。",
